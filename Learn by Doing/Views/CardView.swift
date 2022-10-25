@@ -10,12 +10,19 @@ import SwiftUI
 struct CardView: View {
     //MARK: - Properties
     
+    @State private var fadeIn: Bool = false
+    @State private var moveDownward: Bool = false
+    @State private var moveUpward: Bool = false
+    
+    var hapticImpact = UIImpactFeedbackGenerator(style: .heavy)
+    
     var card: Card
         
     //MARK: - CARD
     var body: some View {
         ZStack {
             Image(card.imageName)
+                .opacity(fadeIn ? 1.0 : 0.0)
             
             VStack {
                 Text(card.title)
@@ -28,10 +35,12 @@ struct CardView: View {
                     .foregroundColor(Color.white)
                     .italic()
             }//:VStack
-            .offset(y: -218)
+            .offset(y: moveDownward ? -218 : -300)
             
             Button {
                 playSound(sound: "sound-chime", type: "mp3")
+                
+                self.hapticImpact.impactOccurred()
             } label: {
                 HStack {
                     Text(card.callToAction.uppercased())
@@ -49,7 +58,7 @@ struct CardView: View {
                     .clipShape(Capsule())
                     .shadow(color: Color("ColorShadow"), radius: 6, x: 0, y: 3)
             }
-            .offset(y: 210)
+            .offset(y: moveUpward ? 210 : 300)
 
         } //ZSTack
         .frame(width: 335, height: 545)
@@ -57,6 +66,16 @@ struct CardView: View {
     
         .cornerRadius(16)
         .shadow(radius: 8)
+        .onAppear {
+            withAnimation(.linear(duration: 1.2)) {
+                self.fadeIn.toggle()
+            }
+            
+            withAnimation(.linear(duration: 0.8)) {
+                self.moveDownward.toggle()
+                self.moveUpward.toggle()
+            }
+        }
     }
 }
 
