@@ -16,7 +16,33 @@
 		5760B5A32907ED5C00C44CF4 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760B5A22907ED5C00C44CF4 /* CardModel.swift */; };
 		5760B5A62907EDE200C44CF4 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760B5A52907EDE200C44CF4 /* CardData.swift */; };
 		5760B5A92907EF9400C44CF4 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760B5A82907EF9400C44CF4 /* PlaySound.swift */; };
+		5760B5AF2907F35200C44CF4 /* Stickers.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5760B5AE2907F35200C44CF4 /* Stickers.xcassets */; };
+		5760B5B32907F35200C44CF4 /* stickers.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 5760B5AC2907F35000C44CF4 /* stickers.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5760B5B12907F35200C44CF4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5760B5812907E38100C44CF4 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5760B5AB2907F35000C44CF4;
+			remoteInfo = stickers;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		5760B5B72907F35200C44CF4 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				5760B5B32907F35200C44CF4 /* stickers.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		5760B5892907E38100C44CF4 /* Learn by Doing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Learn by Doing.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -30,6 +56,9 @@
 		5760B5A22907ED5C00C44CF4 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
 		5760B5A52907EDE200C44CF4 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
 		5760B5A82907EF9400C44CF4 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
+		5760B5AC2907F35000C44CF4 /* stickers.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = stickers.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		5760B5AE2907F35200C44CF4 /* Stickers.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Stickers.xcassets; sourceTree = "<group>"; };
+		5760B5B02907F35200C44CF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +76,7 @@
 			isa = PBXGroup;
 			children = (
 				5760B58B2907E38100C44CF4 /* Learn by Doing */,
+				5760B5AD2907F35000C44CF4 /* stickers */,
 				5760B58A2907E38100C44CF4 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -55,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				5760B5892907E38100C44CF4 /* Learn by Doing.app */,
+				5760B5AC2907F35000C44CF4 /* stickers.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -124,6 +155,15 @@
 			path = Utility;
 			sourceTree = "<group>";
 		};
+		5760B5AD2907F35000C44CF4 /* stickers */ = {
+			isa = PBXGroup;
+			children = (
+				5760B5AE2907F35200C44CF4 /* Stickers.xcassets */,
+				5760B5B02907F35200C44CF4 /* Info.plist */,
+			);
+			path = stickers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -134,15 +174,32 @@
 				5760B5852907E38100C44CF4 /* Sources */,
 				5760B5862907E38100C44CF4 /* Frameworks */,
 				5760B5872907E38100C44CF4 /* Resources */,
+				5760B5B72907F35200C44CF4 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				5760B5B22907F35200C44CF4 /* PBXTargetDependency */,
 			);
 			name = "Learn by Doing";
 			productName = "Learn by Doing";
 			productReference = 5760B5892907E38100C44CF4 /* Learn by Doing.app */;
 			productType = "com.apple.product-type.application";
+		};
+		5760B5AB2907F35000C44CF4 /* stickers */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5760B5B42907F35200C44CF4 /* Build configuration list for PBXNativeTarget "stickers" */;
+			buildPhases = (
+				5760B5AA2907F35000C44CF4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = stickers;
+			productName = stickers;
+			productReference = 5760B5AC2907F35000C44CF4 /* stickers.appex */;
+			productType = "com.apple.product-type.app-extension.messages-sticker-pack";
 		};
 /* End PBXNativeTarget section */
 
@@ -155,6 +212,9 @@
 				LastUpgradeCheck = 1340;
 				TargetAttributes = {
 					5760B5882907E38100C44CF4 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+					5760B5AB2907F35000C44CF4 = {
 						CreatedOnToolsVersion = 13.4;
 					};
 				};
@@ -173,6 +233,7 @@
 			projectRoot = "";
 			targets = (
 				5760B5882907E38100C44CF4 /* Learn by Doing */,
+				5760B5AB2907F35000C44CF4 /* stickers */,
 			);
 		};
 /* End PBXProject section */
@@ -185,6 +246,14 @@
 				5760B5942907E38300C44CF4 /* Preview Assets.xcassets in Resources */,
 				5760B59B2907E5D100C44CF4 /* sound-chime.mp3 in Resources */,
 				5760B5912907E38300C44CF4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5760B5AA2907F35000C44CF4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5760B5AF2907F35200C44CF4 /* Stickers.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -205,6 +274,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5760B5B22907F35200C44CF4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5760B5AB2907F35000C44CF4 /* stickers */;
+			targetProxy = 5760B5B12907F35200C44CF4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		5760B5952907E38300C44CF4 /* Debug */ = {
@@ -379,6 +456,46 @@
 			};
 			name = Release;
 		};
+		5760B5B52907F35200C44CF4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DMF923GY8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = stickers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Learn by Doing";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "branco.marygimm.Learn-by-Doing.stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5760B5B62907F35200C44CF4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "iMessage App Icon";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = DMF923GY8Z;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = stickers/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Learn by Doing";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "branco.marygimm.Learn-by-Doing.stickers";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -396,6 +513,15 @@
 			buildConfigurations = (
 				5760B5982907E38300C44CF4 /* Debug */,
 				5760B5992907E38300C44CF4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5760B5B42907F35200C44CF4 /* Build configuration list for PBXNativeTarget "stickers" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5760B5B52907F35200C44CF4 /* Debug */,
+				5760B5B62907F35200C44CF4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
