@@ -8,10 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-
-//MARK: - Content
+    
+    var cards: [Card] = cardData
+    
+    //MARK: - Content
     var body: some View {
-       CardView()
+        ScrollView(.horizontal, showsIndicators: false) {
+            HStack(alignment: .center, spacing: 20, content: {
+                ForEach(cards) { card in
+                    CardView(card: card)
+                }
+            }) //: HStack
+            .padding(20)
+        }//: ScrollView
     }
 }
 

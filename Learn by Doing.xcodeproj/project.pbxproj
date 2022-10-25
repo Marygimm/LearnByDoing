@@ -13,6 +13,9 @@
 		5760B5942907E38300C44CF4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5760B5932907E38300C44CF4 /* Preview Assets.xcassets */; };
 		5760B59B2907E5D100C44CF4 /* sound-chime.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 5760B59A2907E5D100C44CF4 /* sound-chime.mp3 */; };
 		5760B59F2907E87800C44CF4 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760B59E2907E87800C44CF4 /* CardView.swift */; };
+		5760B5A32907ED5C00C44CF4 /* CardModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760B5A22907ED5C00C44CF4 /* CardModel.swift */; };
+		5760B5A62907EDE200C44CF4 /* CardData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760B5A52907EDE200C44CF4 /* CardData.swift */; };
+		5760B5A92907EF9400C44CF4 /* PlaySound.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5760B5A82907EF9400C44CF4 /* PlaySound.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +27,9 @@
 		5760B59A2907E5D100C44CF4 /* sound-chime.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "sound-chime.mp3"; sourceTree = "<group>"; };
 		5760B59D2907E64300C44CF4 /* Learn-by-Doing-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Learn-by-Doing-Info.plist"; sourceTree = SOURCE_ROOT; };
 		5760B59E2907E87800C44CF4 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		5760B5A22907ED5C00C44CF4 /* CardModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardModel.swift; sourceTree = "<group>"; };
+		5760B5A52907EDE200C44CF4 /* CardData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardData.swift; sourceTree = "<group>"; };
+		5760B5A82907EF9400C44CF4 /* PlaySound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaySound.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +62,8 @@
 		5760B58B2907E38100C44CF4 /* Learn by Doing */ = {
 			isa = PBXGroup;
 			children = (
+				5760B5A72907EF8B00C44CF4 /* Utility */,
+				5760B5A42907ED5F00C44CF4 /* Model */,
 				5760B5A12907E88800C44CF4 /* Views */,
 				5760B5A02907E87E00C44CF4 /* App */,
 				5760B59C2907E5D600C44CF4 /* Sound */,
@@ -97,6 +105,23 @@
 				5760B59E2907E87800C44CF4 /* CardView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5760B5A42907ED5F00C44CF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5760B5A22907ED5C00C44CF4 /* CardModel.swift */,
+				5760B5A52907EDE200C44CF4 /* CardData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5760B5A72907EF8B00C44CF4 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				5760B5A82907EF9400C44CF4 /* PlaySound.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,7 +195,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5760B5A62907EDE200C44CF4 /* CardData.swift in Sources */,
+				5760B5A92907EF9400C44CF4 /* PlaySound.swift in Sources */,
 				5760B58F2907E38100C44CF4 /* ContentView.swift in Sources */,
+				5760B5A32907ED5C00C44CF4 /* CardModel.swift in Sources */,
 				5760B59F2907E87800C44CF4 /* CardView.swift in Sources */,
 				5760B58D2907E38100C44CF4 /* Learn_by_DoingApp.swift in Sources */,
 			);
